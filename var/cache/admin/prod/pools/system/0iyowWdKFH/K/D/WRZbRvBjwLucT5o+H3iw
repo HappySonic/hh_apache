@@ -1,0 +1,19 @@
+<?php //Sulu%255CBundle%255CMediaBundle%255CController%255CMediaFormatController
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['HandcraftedInTheAlps\\RestRoutingBundle\\Controller\\Annotations\\RouteResource'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('HandcraftedInTheAlps\\RestRoutingBundle\\Controller\\Annotations\\RouteResource')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'resource' => [
+                'Format',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

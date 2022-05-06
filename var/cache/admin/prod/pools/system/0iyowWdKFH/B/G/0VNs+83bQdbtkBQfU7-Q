@@ -1,0 +1,3 @@
+<?php //Sulu%255CBundle%255CContactBundle%255CEntity%255CPhoneType%2523addPhone
+
+return [PHP_INT_MAX, []];

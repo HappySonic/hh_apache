@@ -1,0 +1,3 @@
+0
+%255Bnodes%253A_%252Fcmf%252Fexample%252Froutes%252Fen%252C_default_live%255D%255B9%255D
+O:8:"stdClass":17:{s:15:"jcr:primaryType";s:15:"nt:unstructured";s:16:":jcr:primaryType";i:7;s:14:"jcr:mixinTypes";a:2:{i:0;s:17:"mix:referenceable";i:1;s:9:"sulu:path";}s:15:":jcr:mixinTypes";i:7;s:8:"jcr:uuid";s:36:"868ba20e-e594-42f0-bcfe-ac33a3cd347e";s:9:":jcr:uuid";i:1;s:12:"sulu:history";b:0;s:13:":sulu:history";i:6;s:12:"sulu:created";s:29:"2022-04-29T13:48:45.100+00:00";s:13:":sulu:created";i:5;s:12:"sulu:changed";s:29:"2022-04-29T13:48:45.100+00:00";s:13:":sulu:changed";i:5;s:12:"sulu:content";s:36:"fbe5e5e6-0887-4dee-95b7-59aadb06b543";s:13:":sulu:content";i:9;s:8:"products";O:8:"stdClass":0:{}s:4:"blog";O:8:"stdClass":0:{}s:8:"contacts";O:8:"stdClass":0:{}}

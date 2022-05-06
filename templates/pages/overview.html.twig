@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+{% block content %}
+{% set image_first = content.first_image.formats['920x.webp'] %}
+<section class="hero" id="home"><div class="overlay"></div>
+      <img src="{{ image_first }}" alt="Car1" class="d-block" style="width:100%">
+    <div class="text py-5">
+      <h1>   <span></span></h1>
+      <p class="lead"> </p>
+    </div>
+  </section>
+<section class="padding bg-grey">
+		<div class="container">
+			{{ content.description|raw }}
+		</div>
+</section>
+
+<ul class="pagination">
+    {% set page = view.pages.page %}
+
+    {% if page-1 >= 1 %}
+        <li><a href="{{ sulu_content_path(content.url) }}?p={{ page-1 }}">&laquo;</a></li>
+    {% endif %}
+
+    {% if view.pages.hasNextPage %}
+        <li><a href="{{ sulu_content_path(content.url) }}?p={{ page+1 }}">&raquo;</a></li>
+    {% endif %}
+</ul>
+
+<div property="pages">
+    {% for page in content.pages %}
+        <div class="col-lg-{{ view.pages.presentAs == 'two' ? '6' : '12' }}">
+            <h2>
+                <a href="{{ sulu_content_path(page.url) }}">{{ page.title }}</a>
+            </h2>
+
+            <p>
+                <i>{{ page.excerptTitle }}</i> | <i>{{ page.excerptTags|join(', ') }}</i>
+            </p>
+
+            {% if page.excerptImages|length > 0 %}
+                <img src="{{ page.excerptImages[0].thumbnails['50x50'] }}" alt="{{ page.excerptImages[0].title }}"/>
+            {% endif %}
+
+            {{ page.article|raw }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

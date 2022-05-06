@@ -1,0 +1,146 @@
+<?php //dc44485114bb7edfecb0a5801aade156
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'path' => [
+                        0,
+                    ],
+                    'locale' => [
+                        1,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT r0_.path AS path_0, r0_.locale AS locale_1, r0_.entity_class AS entity_class_2, r0_.entity_id AS entity_id_3, r0_.history AS history_4, r0_.id AS id_5, r0_.created AS created_6, r0_.changed AS changed_7, r1_.path AS path_8, r1_.locale AS locale_9, r1_.entity_class AS entity_class_10, r1_.entity_id AS entity_id_11, r1_.history AS history_12, r1_.id AS id_13, r1_.created AS created_14, r1_.changed AS changed_15, r0_.target_id AS target_id_16, r0_.idUsersCreator AS idUsersCreator_17, r0_.idUsersChanger AS idUsersChanger_18, r1_.target_id AS target_id_19, r1_.idUsersCreator AS idUsersCreator_20, r1_.idUsersChanger AS idUsersChanger_21 FROM ro_routes r0_ LEFT JOIN ro_routes r1_ ON r0_.target_id = r1_.id WHERE r0_.path = ? AND r0_.locale = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'entity' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'target' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                ],
+            ],
+            'relationMap' => [
+                2 => [
+                    'target' => 'target',
+                ],
+            ],
+            'parentAliasMap' => [
+                2 => [
+                    'target' => 'entity',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'path_0' => 'path',
+                    'locale_1' => 'locale',
+                    'entity_class_2' => 'entityClass',
+                    'entity_id_3' => 'entityId',
+                    'history_4' => 'history',
+                    'id_5' => 'id',
+                    'created_6' => 'created',
+                    'changed_7' => 'changed',
+                    'path_8' => 'path',
+                    'locale_9' => 'locale',
+                    'entity_class_10' => 'entityClass',
+                    'entity_id_11' => 'entityId',
+                    'history_12' => 'history',
+                    'id_13' => 'id',
+                    'created_14' => 'created',
+                    'changed_15' => 'changed',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'target_id_16' => 'integer',
+                    'idUsersCreator_17' => 'integer',
+                    'idUsersChanger_18' => 'integer',
+                    'target_id_19' => 'integer',
+                    'idUsersCreator_20' => 'integer',
+                    'idUsersChanger_21' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'entity' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'target_id_16' => 'target_id',
+                    'idUsersCreator_17' => 'idUsersCreator',
+                    'idUsersChanger_18' => 'idUsersChanger',
+                    'target_id_19' => 'target_id',
+                    'idUsersCreator_20' => 'idUsersCreator',
+                    'idUsersChanger_21' => 'idUsersChanger',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'path_0' => 'entity',
+                    'locale_1' => 'entity',
+                    'entity_class_2' => 'entity',
+                    'entity_id_3' => 'entity',
+                    'history_4' => 'entity',
+                    'id_5' => 'entity',
+                    'created_6' => 'entity',
+                    'changed_7' => 'entity',
+                    'path_8' => 'target',
+                    'locale_9' => 'target',
+                    'entity_class_10' => 'target',
+                    'entity_id_11' => 'target',
+                    'history_12' => 'target',
+                    'id_13' => 'target',
+                    'created_14' => 'target',
+                    'changed_15' => 'target',
+                    'target_id_16' => 'entity',
+                    'idUsersCreator_17' => 'entity',
+                    'idUsersChanger_18' => 'entity',
+                    'target_id_19' => 'target',
+                    'idUsersCreator_20' => 'target',
+                    'idUsersChanger_21' => 'target',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'path_0' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'locale_1' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'entity_class_2' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'entity_id_3' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'history_4' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'id_5' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'created_6' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'changed_7' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'path_8' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'locale_9' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'entity_class_10' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'entity_id_11' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'history_12' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'id_13' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'created_14' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                    'changed_15' => 'Sulu\\Bundle\\RouteBundle\\Entity\\Route',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -1,0 +1,112 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+{% set image_first = content.first_image.formats['920x.webp'] %}
+<section class="hero" id="home"><div class="overlay"></div>
+      <img src="{{ image_first }}" alt="Car1" class="d-block" style="width:100%">
+    <div class="text py-5">
+      <h1> {{ content.title }} <span></span></h1>
+      <p class="lead"> {{ content.subtitle_home }} </p>
+    </div>
+  </section>
+<section class="padding bg-grey">
+		<div class="container">
+			{{ content.description|raw }}
+		</div>
+</section>
+
+<section class="padding bg-grey">
+<div class="container">
+    {% for teaser in content.teasers %}
+        <article>
+             <h3>
+                 {{ teaser.title }}
+             </h3>
+
+             {% set teaserImage = sulu_resolve_media(teaser.mediaId, app.request.locale) %}
+
+             {% if teaserImage %}
+                 <img src="{{ teaserImage.formats['sulu-260x'] }}" alt="{{ teaserImage.title }}">
+             {% endif %}
+
+             <div>
+                  {{ teaser.description|raw }}
+             </div>
+
+             <a href="{{ sulu_content_path(teaser.url) }}">
+                 {{ teaser.moreText|default('Read more') }}
+             </a>
+        </article>
+    {% endfor %}
+</div>
+</section>
+
+
+<section class="padding bg-grey">
+<div class="container">
+    {% for teaser in content.teasers2 %}
+        <article>
+             <h3>
+                 {{ teaser.title }}
+             </h3>
+
+             {% set teaserImage = sulu_resolve_media(teaser.mediaId, app.request.locale) %}
+
+             {% if teaserImage %}
+                 <img src="{{ teaserImage.formats['sulu-260x'] }}" alt="{{ teaserImage.title }}">
+             {% endif %}
+
+             <div>
+                  {{ teaser.description|raw }}
+             </div>
+
+             <a href="{{ sulu_content_path(teaser.url) }}">
+                 {{ teaser.moreText|default('Read more') }}
+             </a>
+        </article>
+    {% endfor %}
+</div>
+</section>
+			
+
+<!-- S L I D E R -->
+
+
+
+{% if content.imagesCarousel is not empty %}
+	    <div class="container-fluid bg-dark" id="car">
+        <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="mycarousel">
+            <div class="carousel-indicators">
+    {% for i in 0..content.imagesCarousel|length - 1 %}
+        {% if loop.first %}{% set active = 'active' %} {% set ariacurrent = 'aria-current="true"' %}{% else %}{% set active = '' %}{% set areacurrent = '' %}{% endif %}
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="{{ i }}" class="{{ active }}" {{ ariacurrent }} aria-label="Slide 1"></button>
+    {% endfor %}
+    </div>
+	<div class="carousel-inner">
+
+    {% for image in content.imagesCarousel %}
+            {% if loop.first %}{% set active = 'active' %}{% else %}{% set active = '' %}{% endif %}
+            <div class="carousel-item  {{ active }}">
+
+            <img src="{{ image.formats['920x.webp'] }}" class="d-block w-100" alt="slide 2">
+            </div>
+    {% endfor %}
+    </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+  </div>
+</section> 
+{% endif %}
+
+
+
+{# %dump(content) #}
+{% endblock %}
+

@@ -1,0 +1,3 @@
+<?php //Sulu%255CComponent%255CContent%255CDocument%255CBehavior%255CResourceSegmentBehavior%2523getResourceSegment
+
+return [PHP_INT_MAX, []];

@@ -1,0 +1,3 @@
+<?php //Sulu%255CComponent%255CRest%255CListBuilder%255CCollectionRepresentation%2523toArray
+
+return [PHP_INT_MAX, []];

@@ -1,0 +1,63 @@
+<?php //efe04e81aefa04989fa685ae8a7d455d
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'locale' => [
+                        0,
+                    ],
+                    'ids' => [
+                        1,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT (CASE WHEN c0_.translation IS NOT NULL THEN c0_.translation ELSE c1_.translation END) AS sclr_0, c2_.id AS id_1, c2_.depth AS depth_2, c3_.id AS id_3, (CASE WHEN c0_.locale IS NOT NULL THEN c0_.locale ELSE c2_.default_locale END) AS sclr_4, c2_.default_locale AS default_locale_5, c2_.lft AS lft_6, c2_.rgt AS rgt_7 FROM ca_categories c2_ LEFT JOIN ca_category_translations c0_ ON c2_.id = c0_.idCategories AND (c0_.locale = ?) LEFT JOIN ca_category_translations c1_ ON c2_.id = c1_.idCategories AND (c1_.locale = c2_.default_locale) LEFT JOIN ca_categories c3_ ON c2_.idCategoriesParent = c3_.id WHERE c2_.id IN (?) ORDER BY depth_2 ASC, sclr_0 ASC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'sclr_0' => 'name',
+                    'id_1' => 'id',
+                    'depth_2' => 'depth',
+                    'id_3' => 'parent',
+                    'sclr_4' => 'locale',
+                    'default_locale_5' => 'defaultLocale',
+                    'lft_6' => 'lft',
+                    'rgt_7' => 'rgt',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'sclr_0' => 'string',
+                    'id_1' => 'integer',
+                    'depth_2' => 'integer',
+                    'id_3' => 'integer',
+                    'sclr_4' => 'string',
+                    'default_locale_5' => 'string',
+                    'lft_6' => 'integer',
+                    'rgt_7' => 'integer',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

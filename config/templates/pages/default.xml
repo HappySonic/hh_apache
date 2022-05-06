@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>default</key>
+
+    <view>pages/default</view>
+    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+    <cacheLifetime>604800</cacheLifetime>
+
+    <meta>
+        <title lang="en">Default</title>
+        <title lang="de">Standard</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+                <title lang="de">Titel</title>
+            </meta>
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+
+<property name="subtitle_home" type="text_line">
+    <meta>
+        <title lang="en">Subtitle</title>
+    </meta>
+    <params>
+        <param name="headline" value="true"/>
+    </params>
+</property>
+        <property name="url" type="resource_locator" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+                <title lang="de">Adresse</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
+</property>
+<property name="first_image" type="single_media_selection" mandatory="true">
+    <meta>
+        <title lang="en">First image</title>
+    </meta>
+        <params>
+        <param name="types" value="image"/>
+        </params>
+</property>
+
+
+<property name="description" type="text_editor">
+    <meta>
+        <title lang="en">Description</title>
+    </meta>
+</property>
+    <property name="first_image" type="single_media_selection" mandatory="true">
+    <meta>
+        <title lang="en">First image</title>
+    </meta>
+        <params>
+        <param name="types" value="image"/>
+        </params>
+</property>
+
+
+        <block name="blocks" default-type="article" minOccurs="0">
+            <meta>
+                <title lang="en">Content</title>
+                <title lang="de">Inhalte</title>
+            </meta>
+
+            <types>
+                <type name="singleImage">
+                    <properties>
+                        <property name="single_Image" type="single_media_selection">
+                        <meta>
+                            <title lang="en">Single Image</title>
+                        </meta>
+                        </property>
+                    </properties>
+                </type>
+                <type name="imageGallery">
+                <meta>
+                    <title lang="en">Image Gallery</title>
+                </meta>
+                    <properties>
+                        <property name="images_list" type="media_selection">
+                        </property>
+                    </properties>
+                </type>
+                <type name="article">
+                <properties>
+                    <property name="article" type="text_editor">
+                        <meta>
+                            <title lang="en">Article</title>
+                            <title lang="de">Artikel</title>
+                        </meta>
+                    </property>
+                </properties>
+                </type>
+
+
+                <type name="smart">
+                    <meta>
+                        <title lang="en">Smart Content</title>
+                    </meta>
+                <properties>
+                    <property name="pages" type="smart_content">
+
+                    <params>
+                        <param name="provider" value="pages"/>
+                        <param name="max_per_page" value="5"/>
+                        <param name="page_parameter" value="p"/>
+
+                        <param name="properties" type="collection">
+                        <param name="article" value="article"/>
+                        <param name="excerptTitle" value="excerpt.title"/>
+                        <param name="excerptTags" value="excerpt.tags"/>
+                        <param name="excerptImages" value="excerpt.images"/>
+                        <param name="excerptDescription" value="excerpt.description"/>
+                 </param>
+
+                        <param name="present_as" type="collection">
+                            <param name="two">
+                                <meta>
+                                    <title lang="en">Two columns</title>
+                                </meta>
+                            </param>
+
+                            <param name="one">
+                                <meta>
+                                    <title lang="en">One column</title>
+                                </meta>
+                            </param>
+                        </param>
+                        </params>
+                    </property>
+                    </properties>
+                    </type>
+            </types>
+        </block>
+
+
+    </properties>
+
+
+
+
+    
+
+
+</template>

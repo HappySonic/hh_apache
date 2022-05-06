@@ -1,0 +1,79 @@
+<?php //ecaa12250d38f3d63b59a8c876a8a542
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'locale' => [
+                        0,
+                    ],
+                    'ids' => [
+                        1,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT m0_.name AS name_0, m1_.name AS name_1, m1_.size AS size_2, m1_.mimeType AS mimeType_3, (CASE WHEN m2_.title IS NOT NULL THEN m2_.title ELSE m3_.title END) AS sclr_4, m4_.id AS id_5, m4_.idPreviewImage AS sclr_6, m5_.name AS name_7, m5_.version AS version_8, m5_.subVersion AS subVersion_9, m5_.mimeType AS mimeType_10, m6_.version AS version_11, m1_.subVersion AS subVersion_12, (CASE WHEN m2_.locale IS NOT NULL THEN m2_.locale ELSE m3_.locale END) AS sclr_13, m1_.storageOptions AS storageOptions_14, m7_.id AS id_15, m4_.created AS created_16 FROM me_media m4_ LEFT JOIN me_media_types m0_ ON m4_.idMediaTypes = m0_.id LEFT JOIN me_files m6_ ON m4_.id = m6_.idMedia LEFT JOIN me_file_versions m1_ ON m6_.id = m1_.idFiles AND (m1_.version = m6_.version) LEFT JOIN me_file_version_meta m2_ ON m1_.id = m2_.idFileVersions AND (m2_.locale = ?) LEFT JOIN me_file_version_meta m3_ ON m1_.idFileVersionsMetaDefault = m3_.id LEFT JOIN me_media m8_ ON m4_.idPreviewImage = m8_.id LEFT JOIN me_files m9_ ON m8_.id = m9_.idMedia LEFT JOIN me_file_versions m5_ ON m9_.id = m5_.idFiles AND (m5_.version = m9_.version) LEFT JOIN me_collections m7_ ON m4_.idCollections = m7_.id WHERE m4_.id IN (?) ORDER BY created_16 DESC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'name_0' => 'type',
+                    'name_1' => 'name',
+                    'size_2' => 'size',
+                    'mimeType_3' => 'mimeType',
+                    'sclr_4' => 'title',
+                    'id_5' => 'id',
+                    'sclr_6' => 'previewImageId',
+                    'name_7' => 'previewImageName',
+                    'version_8' => 'previewImageVersion',
+                    'subVersion_9' => 'previewImageSubVersion',
+                    'mimeType_10' => 'previewImageMimeType',
+                    'version_11' => 'version',
+                    'subVersion_12' => 'subVersion',
+                    'sclr_13' => 'locale',
+                    'storageOptions_14' => 'storageOptions',
+                    'id_15' => 'collection',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'name_0' => 'string',
+                    'name_1' => 'string',
+                    'size_2' => 'integer',
+                    'mimeType_3' => 'string',
+                    'sclr_4' => 'string',
+                    'id_5' => 'integer',
+                    'sclr_6' => 'string',
+                    'name_7' => 'string',
+                    'version_8' => 'integer',
+                    'subVersion_9' => 'integer',
+                    'mimeType_10' => 'string',
+                    'version_11' => 'integer',
+                    'subVersion_12' => 'integer',
+                    'sclr_13' => 'string',
+                    'storageOptions_14' => 'text',
+                    'id_15' => 'integer',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

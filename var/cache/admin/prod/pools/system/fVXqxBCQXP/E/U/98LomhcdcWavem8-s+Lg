@@ -1,0 +1,90 @@
+<?php //baaceb0fa5fae98d8b64f9a05a3eab09
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'entityId' => [
+                        0,
+                    ],
+                    'entityClass' => [
+                        1,
+                    ],
+                    'system' => [
+                        2,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT s0_.permissions AS permissions_0, s0_.entityId AS entityId_1, s0_.entityClass AS entityClass_2, s0_.entityIdInteger AS entityIdInteger_3, s0_.id AS id_4, s0_.idRoles AS idRoles_5 FROM se_access_controls s0_ LEFT JOIN se_roles s1_ ON s0_.idRoles = s1_.id WHERE s0_.entityId = ? AND s0_.entityClass = ? AND s1_.securitySystem = ?',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'accessControl' => 'Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'permissions_0' => 'permissions',
+                    'entityId_1' => 'entityId',
+                    'entityClass_2' => 'entityClass',
+                    'entityIdInteger_3' => 'entityIdInteger',
+                    'id_4' => 'id',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'idRoles_5' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'accessControl' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'idRoles_5' => 'idRoles',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'permissions_0' => 'accessControl',
+                    'entityId_1' => 'accessControl',
+                    'entityClass_2' => 'accessControl',
+                    'entityIdInteger_3' => 'accessControl',
+                    'id_4' => 'accessControl',
+                    'idRoles_5' => 'accessControl',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'permissions_0' => 'Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl',
+                    'entityId_1' => 'Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl',
+                    'entityClass_2' => 'Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl',
+                    'entityIdInteger_3' => 'Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl',
+                    'id_4' => 'Sulu\\Bundle\\SecurityBundle\\Entity\\AccessControl',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

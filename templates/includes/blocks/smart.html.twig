@@ -1,0 +1,33 @@
+<div class="block">
+<ul class="pagination">
+    {% set page = view.pages.page %}
+
+    {% if page-1 >= 1 %}
+        <li><a href="{{ sulu_content_path(content.url) }}?p={{ page-1 }}">&laquo;</a></li>
+    {% endif %}
+
+    {% if view.pages.hasNextPage %}
+        <li><a href="{{ sulu_content_path(content.url) }}?p={{ page+1 }}">&raquo;</a></li>
+    {% endif %}
+</ul>
+
+<div property="pages">
+    {% for page in content.pages %}
+        <div class="col-lg-{{ view.pages.presentAs == 'two' ? '6' : '12' }}">
+            <h2>
+                <a href="{{ sulu_content_path(page.url) }}">{{ page.title }}</a>
+            </h2>
+
+            <p>
+                <i>{{ page.excerptTitle }}</i> | <i>{{ page.excerptTags|join(', ') }}</i>
+            </p>
+
+            {% if page.excerptImages|length > 0 %}
+                <img src="{{ page.excerptImages[0].thumbnails['sulu-50x50.webp'] }}" alt="{{ page.excerptImages[0].title }}"/>
+            {% endif %}
+
+            {{ page.excerptDescription|raw }}
+        </div>
+    {% endfor %}
+</div>
+</div>

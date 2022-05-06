@@ -1,0 +1,3 @@
+<?php //Sulu%255CComponent%255CSmartContent%255CRest%255CItemCollectionRepresentation%2523getTotal
+
+return [PHP_INT_MAX, []];

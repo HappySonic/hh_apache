@@ -1,0 +1,3 @@
+<?php //Sulu%255CComponent%255CRest%255CApiWrapper
+
+return [PHP_INT_MAX, []];

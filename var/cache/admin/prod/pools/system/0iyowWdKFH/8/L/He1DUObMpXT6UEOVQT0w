@@ -1,0 +1,13 @@
+<?php //Sulu%255CComponent%255CContent%255CSmartContent%255CContentDataItem%2523getPublishedState
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['JMS\\Serializer\\Annotation\\VirtualProperty'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('JMS\\Serializer\\Annotation\\VirtualProperty')),
+    ],
+    null,
+    [],
+    [
+        $o[0],
+    ],
+    []
+); }];

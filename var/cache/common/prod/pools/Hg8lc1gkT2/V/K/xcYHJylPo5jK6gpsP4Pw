@@ -1,0 +1,3 @@
+0
+%255Bnodes%253A_%252Fcmf%252Fexample%252Froutes%252Fen%252Fblog%252C_default_live%255D%255B5%255D
+O:8:"stdClass":14:{s:15:"jcr:primaryType";s:15:"nt:unstructured";s:16:":jcr:primaryType";i:7;s:14:"jcr:mixinTypes";a:2:{i:0;s:17:"mix:referenceable";i:1;s:9:"sulu:path";}s:15:":jcr:mixinTypes";i:7;s:8:"jcr:uuid";s:36:"3b3f781c-1204-4227-bc8c-12839670aab2";s:9:":jcr:uuid";i:1;s:12:"sulu:history";b:0;s:13:":sulu:history";i:6;s:12:"sulu:created";s:29:"2022-04-29T15:09:20.755+00:00";s:13:":sulu:created";i:5;s:12:"sulu:changed";s:29:"2022-04-29T15:09:20.755+00:00";s:13:":sulu:changed";i:5;s:12:"sulu:content";s:36:"e8d99766-ca4f-4648-af55-5f6d77ce38e1";s:13:":sulu:content";i:9;}

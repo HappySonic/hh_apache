@@ -1,0 +1,3 @@
+<?php //ArrayObject%2523natsort
+
+return [PHP_INT_MAX, []];

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+      <block name="blocks" default-type="image_gallery">
+      <types>
+      <type name="image_gallery>">
+    <property name="image_gallery" type="media_selection">
+        <meta>
+            <title lang="de">Adresse</title>
+            <title lang="en">Image Gallery</title>
+        </meta>
+        <params>
+            <param name="types" value="image"/>
+        </params>
+    </property>
+    </type>
+    </types>
+    </block>
+</properties>

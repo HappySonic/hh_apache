@@ -1,0 +1,3 @@
+<?php //Sulu%255CComponent%255CRest%255CAbstractRestController
+
+return [PHP_INT_MAX, []];

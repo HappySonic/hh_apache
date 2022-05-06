@@ -1,0 +1,3 @@
+<?php //Sulu%255CBundle%255CAdminBundle%255CAdmin%255CView%255CTogglerToolbarAction
+
+return [PHP_INT_MAX, []];

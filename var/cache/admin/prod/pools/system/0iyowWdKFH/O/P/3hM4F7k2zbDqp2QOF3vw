@@ -1,0 +1,19 @@
+<?php //Sulu%255CBundle%255CAdminBundle%255CMetadata%255CFormMetadata%255CTypedFormMetadata%2524forms
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['JMS\\Serializer\\Annotation\\SerializedName'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('JMS\\Serializer\\Annotation\\SerializedName')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'types',
+            ],
+        ],
+    ],
+    [
+        $o[0],
+    ],
+    []
+); }];

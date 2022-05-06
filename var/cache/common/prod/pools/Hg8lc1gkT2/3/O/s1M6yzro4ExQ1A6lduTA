@@ -1,0 +1,3 @@
+0
+%255Bnodes%253A_%252Fcmf%252Fexample%252C_default%255D%255B20%255D
+O:8:"stdClass":9:{s:15:"jcr:primaryType";s:15:"nt:unstructured";s:16:":jcr:primaryType";i:7;s:14:"jcr:mixinTypes";a:1:{i:0;s:17:"mix:referenceable";}s:15:":jcr:mixinTypes";i:7;s:8:"jcr:uuid";s:36:"da2ecb8b-d9fc-49e5-ab09-3d08964b4b44";s:9:":jcr:uuid";i:1;s:8:"contents";O:8:"stdClass":0:{}s:6:"routes";O:8:"stdClass":0:{}s:11:"custom-urls";O:8:"stdClass":0:{}}

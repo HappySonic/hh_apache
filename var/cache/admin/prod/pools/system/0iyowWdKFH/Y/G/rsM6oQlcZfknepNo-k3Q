@@ -1,0 +1,3 @@
+<?php //Sulu%255CBundle%255CPageBundle%255CDocument%255CBasePageDocument%2523getNavigationContexts
+
+return [PHP_INT_MAX, []];

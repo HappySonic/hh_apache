@@ -1,0 +1,87 @@
+<?php //5b26350f96d348a85152c748a41df349
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'locale' => [
+                        0,
+                    ],
+                    'ids' => [
+                        1,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT m0_.id AS id_0, m0_.changed AS changed_1, m0_.created AS created_2, m1_.name AS name_3, m2_.version AS version_4, m3_.name AS name_5, m3_.size AS size_6, m3_.mimeType AS mimeType_7, m3_.downloadCounter AS downloadCounter_8, (CASE WHEN m4_.title IS NOT NULL THEN m4_.title ELSE m5_.title END) AS sclr_9, m4_.description AS description_10, m0_.idPreviewImage AS sclr_11, m6_.name AS name_12, m6_.version AS version_13, m6_.subVersion AS subVersion_14, m6_.mimeType AS mimeType_15, m3_.subVersion AS subVersion_16, (CASE WHEN m4_.locale IS NOT NULL THEN m4_.locale ELSE m5_.locale END) AS sclr_17, m3_.storageOptions AS storageOptions_18, m7_.id AS id_19 FROM me_media m0_ LEFT JOIN me_media_types m1_ ON m0_.idMediaTypes = m1_.id LEFT JOIN me_files m2_ ON m0_.id = m2_.idMedia LEFT JOIN me_file_versions m3_ ON m2_.id = m3_.idFiles AND (m3_.version = m2_.version) LEFT JOIN me_file_version_meta m4_ ON m3_.id = m4_.idFileVersions AND (m4_.locale = ?) LEFT JOIN me_file_version_meta m5_ ON m3_.idFileVersionsMetaDefault = m5_.id LEFT JOIN me_media m8_ ON m0_.idPreviewImage = m8_.id LEFT JOIN me_files m9_ ON m8_.id = m9_.idMedia LEFT JOIN me_file_versions m6_ ON m9_.id = m6_.idFiles AND (m6_.version = m9_.version) LEFT JOIN me_collections m7_ ON m0_.idCollections = m7_.id WHERE m0_.id IN (?) ORDER BY created_2 DESC',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'changed_1' => 'changed',
+                    'created_2' => 'created',
+                    'name_3' => 'type',
+                    'version_4' => 'version',
+                    'name_5' => 'name',
+                    'size_6' => 'size',
+                    'mimeType_7' => 'mimeType',
+                    'downloadCounter_8' => 'downloadCounter',
+                    'sclr_9' => 'title',
+                    'description_10' => 'description',
+                    'sclr_11' => 'previewImageId',
+                    'name_12' => 'previewImageName',
+                    'version_13' => 'previewImageVersion',
+                    'subVersion_14' => 'previewImageSubVersion',
+                    'mimeType_15' => 'previewImageMimeType',
+                    'subVersion_16' => 'subVersion',
+                    'sclr_17' => 'locale',
+                    'storageOptions_18' => 'storageOptions',
+                    'id_19' => 'collection',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_0' => 'integer',
+                    'changed_1' => 'datetime',
+                    'created_2' => 'datetime',
+                    'name_3' => 'string',
+                    'version_4' => 'integer',
+                    'name_5' => 'string',
+                    'size_6' => 'integer',
+                    'mimeType_7' => 'string',
+                    'downloadCounter_8' => 'integer',
+                    'sclr_9' => 'string',
+                    'description_10' => 'text',
+                    'sclr_11' => 'string',
+                    'name_12' => 'string',
+                    'version_13' => 'integer',
+                    'subVersion_14' => 'integer',
+                    'mimeType_15' => 'string',
+                    'subVersion_16' => 'integer',
+                    'sclr_17' => 'string',
+                    'storageOptions_18' => 'text',
+                    'id_19' => 'integer',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

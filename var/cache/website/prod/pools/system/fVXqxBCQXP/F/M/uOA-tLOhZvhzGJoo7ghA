@@ -1,0 +1,102 @@
+<?php //dee7eee8ae09cba2376efa30f53b60dd
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'url' => [
+                        0,
+                    ],
+                    'environment' => [
+                        1,
+                    ],
+                    'webspaceKey' => [
+                        2,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT w0_.title AS title_0, w0_.webspace_key AS webspace_key_1, w0_.all_domains AS all_domains_2, w0_.content AS content_3, w0_.type AS type_4, w0_.id AS id_5, w1_.url AS url_6, w1_.environment AS environment_7, w1_.id AS id_8 FROM we_analytics w0_ LEFT JOIN we_analytics_domains w2_ ON w0_.id = w2_.analytics LEFT JOIN we_domains w1_ ON w1_.id = w2_.domain WHERE (w0_.all_domains = 1 OR (w1_.url = ? AND w1_.environment = ?)) AND w0_.webspace_key = ? ORDER BY w0_.id ASC, w1_.id ASC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'a' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'domains' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Domain',
+                ],
+            ],
+            'relationMap' => [
+                2 => [
+                    'domains' => 'domains',
+                ],
+            ],
+            'parentAliasMap' => [
+                2 => [
+                    'domains' => 'a',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'title_0' => 'title',
+                    'webspace_key_1' => 'webspaceKey',
+                    'all_domains_2' => 'allDomains',
+                    'content_3' => 'content',
+                    'type_4' => 'type',
+                    'id_5' => 'id',
+                    'url_6' => 'url',
+                    'environment_7' => 'environment',
+                    'id_8' => 'id',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'a' => null,
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'title_0' => 'a',
+                    'webspace_key_1' => 'a',
+                    'all_domains_2' => 'a',
+                    'content_3' => 'a',
+                    'type_4' => 'a',
+                    'id_5' => 'a',
+                    'url_6' => 'domains',
+                    'environment_7' => 'domains',
+                    'id_8' => 'domains',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'title_0' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'webspace_key_1' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'all_domains_2' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'content_3' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'type_4' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'id_5' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Analytics',
+                    'url_6' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Domain',
+                    'environment_7' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Domain',
+                    'id_8' => 'Sulu\\Bundle\\WebsiteBundle\\Entity\\Domain',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
